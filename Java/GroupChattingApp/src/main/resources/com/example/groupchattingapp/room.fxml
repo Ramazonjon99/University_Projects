@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupchattingapp.RoomController">
+   <children>
+      <TextArea fx:id="msgRoom" layoutX="7.0" layoutY="84.0" prefHeight="365.0" prefWidth="386.0" />
+      <TextField fx:id="msgField" layoutX="14.0" layoutY="455.0" onKeyPressed="#sendMessageByKey" prefHeight="40.0" prefWidth="325.0" style="-fx-background-radius: 25;" />
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="346.0" layoutY="461.0" onMouseClicked="#handleSendEvent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8-sent-48.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="79.0" prefWidth="400.0" style="-fx-background-color: #2AABEE;">
+         <children>
+            <Label fx:id="clientName" layoutX="94.0" layoutY="17.0" text="UserName" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="17.0" text="用户ID：" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
